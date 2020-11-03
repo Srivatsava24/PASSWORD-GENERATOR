@@ -1,0 +1,20 @@
+var characters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRSsTUuVvWwXxYyZz";
+var symbol = "!$#%*";
+var Numb = "0123456789";
+onEvent("buttonGeneratePassword", "click", function() {
+  var num1 = randomNumber(0, 51);
+  var num2 = randomNumber(0, 51);
+  var num3 = randomNumber(0, 51);
+  var num4 = randomNumber(0, 51);
+  var num5 = randomNumber(0, 4);
+  var num6 = randomNumber(0, 9);
+  var text1 = characters.substring(num1, num1+1);
+  var text2 = characters.substring(num2, num2+1);
+  var text3 = characters.substring(num3, num3+1);
+  var text4 = characters.substring(num4, num4+1);
+  var text5 = Numb.substring(num5, num5+1);
+  var text6 = symbol.substring(num6, num6+1);
+  console.log(text5);
+  console.log(text6);
+  setText("labelPassword", text1+text2+text3+text4+text5+text6);
+});
